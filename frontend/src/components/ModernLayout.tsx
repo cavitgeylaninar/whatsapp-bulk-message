@@ -37,7 +37,6 @@ import {
   Campaign as CampaignIcon,
   Message as MessageIcon,
   Person as PersonIcon,
-  Settings as SettingsIcon,
   ExitToApp as LogoutIcon,
   Menu as MenuIcon,
   Group as GroupIcon,
@@ -1188,12 +1187,6 @@ const ModernLayout: React.FC = () => {
             <PersonIcon fontSize="small" />
           </ListItemIcon>
           Profil
-        </MenuItem>
-        <MenuItem onClick={() => { navigate('/settings'); handleProfileMenuClose(); }}>
-          <ListItemIcon>
-            <SettingsIcon fontSize="small" />
-          </ListItemIcon>
-          Ayarlar
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleLogout} sx={{ color: 'error.main' }}>
