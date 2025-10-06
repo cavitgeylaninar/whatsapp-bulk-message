@@ -1,0 +1,166 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables (CRITICAL - DO NOT COMMIT)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# WhatsApp session data (CRITICAL - CONTAINS AUTHENTICATION DATA)
+.wwebjs_auth/
+.wwebjs_cache/
+session-*/
+*.session
+*.session.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Uploads and temporary files
+uploads/
+temp/
+tmp/
+*.tmp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Frontend specific
+frontend/build/
+frontend/dist/
+frontend/.cache/
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.test
+frontend/.env.production
+frontend/coverage/
+
+# Backend specific
+backend/build/
+backend/dist/
+backend/.env
+backend/.env.local
+backend/.env.development
+backend/.env.test
+backend/.env.production
+backend/logs/
+backend/uploads/
+backend/coverage/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Redis dump
+dump.rdb
+
+# Certificates and keys (CRITICAL)
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+ssl/
+certs/
+
+# Sensitive data (CRITICAL)
+secrets/
+credentials/
+*.secret
+*.credentials
+config/secrets.json
+config/credentials.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Python (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+wheels/
+
+# Miscellaneous
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Cleanup scripts (keep local only)
+clean-github-history.sh

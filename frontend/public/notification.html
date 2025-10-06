@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Sound Generator</title>
+</head>
+<body>
+    <h1>Notification Sound Generator</h1>
+    <button onclick="playSound()">Play Test Sound</button>
+    <button onclick="downloadSound()">Download as WAV</button>
+    
+    <script>
+    // Create a simple notification beep using Web Audio API
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    function createBeep(duration = 200, frequency = 800, volume = 0.5) {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = frequency;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + duration / 1000);
+        
+        return {oscillator, gainNode};
+    }
+    
+    function playSound() {
+        // Play a two-tone notification sound
+        createBeep(100, 800, 0.3);
+        setTimeout(() => createBeep(150, 1000, 0.3), 120);
+    }
+    
+    function downloadSound() {
+        alert('For a real notification sound, please use an actual MP3 file');
+    }
+    </script>
+</body>
+</html>
